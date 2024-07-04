@@ -1,0 +1,220 @@
+<template>
+  <section>
+    <img :src="logo" :alt="logo" />
+    <h1>Where to Find us?</h1>
+    <div class="bts">
+      <a href="/home1"><button id="b1">Location A</button></a>
+      <a href="/home2"><button id="b2">Location B</button></a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="f1">
+      <p>Need Assistance?</p>
+      <button>Contuct us</button>
+    </div>
+    <div class="f2">
+      <p>
+        "In the School of life, every setback is <br />
+        a lesson in strength."
+      </p>
+    </div>
+    <div class="f3">
+      <div id="f31">
+        <img :src="banner" width="170" :alt="logo" />
+      </div>
+      <div id="f32">
+        <div class="fb">
+          <img :src="fb" :alt="fb" />
+          <p>Facebook</p>
+        </div>
+        <div class="insta">
+          <img :src="insta" :alt="insta" />
+          <p>Instagram</p>
+        </div>
+        <div class="yt">
+          <img :src="you" :alt="utube" />
+          <p>Youtube</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<script>
+export default {
+  name: "Home-page",
+  data() {
+    return {
+      logo: require("../assets/bal.jpg"),
+      banner: require("../assets/BALANCE LOGO.jpg"),
+      fb: require("../assets/fb.png"),
+      insta: require("../assets/insta.jpg"),
+      you: require("../assets/you.png"),
+    };
+  },
+};
+</script>
+
+<style scoped>
+section {
+  text-align: center;
+  height: 450px;
+}
+
+section img {
+  width: 150px;
+}
+
+section h1 {
+  font-size: 60px;
+}
+
+section .bts {
+  position: relative;
+  padding-top: 50px;
+}
+
+section .bts button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 10;
+}
+
+#b1 {
+  left: 25%;
+}
+
+#b2 {
+  right: 25%;
+}
+
+#ar1 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: black;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  /* margin-bottom: 50px; */
+}
+
+.f1 button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border-radius: 2px 2px 5px black;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+footer #f32 {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+footer #f32 img {
+  width: 30px;
+}
+footer #f32 p {
+  font-size: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  footer {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  footer .f1 {
+    width: 200px;
+    text-align: center;
+  }
+
+  footer .f1 p {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .f1 button {
+    font-size: 8px;
+    padding: 5px 10px;
+  }
+
+  .f2 p {
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  footer #f32 {
+    text-align: center;
+  }
+
+  .f3 {
+    text-align: center;
+  }
+  footer .f3 img {
+    width: 5px;
+  }
+
+  #f31 img {
+    width: 100px;
+  }
+
+  footer #f32 p {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .f3 #f32 img {
+    width: 20px;
+  }
+  .f3 #f32 p {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #ar1 {
+    top: 20px;
+    left: 20px;
+  }
+  section img {
+    width: 80px;
+  }
+  section h1 {
+    font-size: 30px;
+  }
+
+  section .bts button {
+    font-size: 14px;
+    width: 100px;
+  }
+  #b1 {
+    left: 65%;
+  }
+
+  #b2 {
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+  #b1 {
+    left: 5%;
+  }
+  #b2{
+    left: 65%;
+  }
+}
+</style>
