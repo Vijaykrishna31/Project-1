@@ -1,5 +1,6 @@
 <template>
   <h1>Index blue</h1>
+  <h6>location A</h6>
 
   <footer>
     <div class="f1">
